@@ -19,9 +19,9 @@
                 <DataAnnotationsValidator />
                 <hr />
                 <div class="form-floating mb-3">
-                    <InputText @bind-Value="Input.Email" class="form-control" aria-required="true" />
-                    <label for="email" class="form-label">Email</label>
-                    <ValidationMessage For="() => Input.Email" class="text-danger" />
+                    <InputText @bind-Value="Input.Name" class="form-control" aria-required="true" />
+                    <label for="email" class="form-label">Name</label>
+                    <ValidationMessage For="() => Input.Name" class="text-danger" />
                 </div>
                 <div class="form-floating mb-3">
                     <InputText type="password" @bind-Value="Input.Password" class="form-control" aria-required="true" />
@@ -53,11 +53,10 @@
     public void RegisterUser()
     {
         bool result = UserService.SaveUser(
-            new User
+            new UserDto
             {
-                Email = Input.Email,
+                Name = Input.Name,
                 Password = Input.Password, 
-                Role = Input.Role
             }
         );
 
@@ -77,7 +76,7 @@
     {
         [Required]
         [EmailAddress]
-        public string Email { get; set; } = "";
+        public string Name { get; set; } = "";
 
         [Required]
         [DataType(DataType.Password)]

@@ -7,9 +7,10 @@ namespace BlazorAuth.Data
         {
             this.context = context; 
         }
-        public bool SaveUser(User user)
+        public bool SaveUser(UserDto user)
         {
-            bool isExist = context.Users.Any(x => x.Email == user.Email);
+            bool isExist = context.Users.Any(x => x.Name == user.Name);
+            //bool isExist = context.Users.Any(x => x.Email == user.Email);
             if (!isExist)
             {
                 context.Add(user);
@@ -19,9 +20,9 @@ namespace BlazorAuth.Data
             return false;
         }
 
-        public User? Verify(string email, string password)
-        {
-            return context.Users.FirstOrDefault(x => x.Email.ToLower() == email.ToLower() && x.Password == password);
-        }
+        // public User? Verify(string email, string password)
+        // {
+        //     return context.Users.FirstOrDefault(x => x.Name.ToLower() == Name.ToLower() && x.Password == password);
+        // }
     }
 }

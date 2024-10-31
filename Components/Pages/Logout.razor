@@ -11,7 +11,7 @@
     protected override async Task OnInitializedAsync()
     {
         await httpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-        nav.NavigateTo("/");
+        nav.NavigateTo("/login");
     }
 }
     

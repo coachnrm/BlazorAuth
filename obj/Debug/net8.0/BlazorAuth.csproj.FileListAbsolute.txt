@@ -139,3 +139,5 @@ D:\BlazorAuth\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptogra
 D:\BlazorAuth\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\BlazorAuth\obj\Debug\net8.0\BlazorAuth.csproj.AssemblyReference.cache
 D:\BlazorAuth\obj\Debug\net8.0\BlazorAuth.csproj.Up2Date
+D:\BlazorAuth\obj\Debug\net8.0\BlazorAuth.sourcelink.json
+D:\BlazorAuth\bin\Debug\net8.0\Newtonsoft.Json.dll
